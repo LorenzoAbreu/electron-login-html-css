@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+*{
+    font-family: 'Roboto', 'Arial';
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #1B1F27;
+    overflow: hidden;
+}
+
+.login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.fields_box{
+    background-color: #181920;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.2s;
+}
+
+.field{
+    margin-top: 10px;
+    height: 25px;
+    background-color: #252A34;
+    border: none;
+    border-radius: 8px;
+    outline: 0;
+    color: white;
+    padding: 10px;
+    font-size: 15pt;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* font-weight: bold; */
+}
+
+.field:nth-child(2){
+    margin-top: 20px;
+}
+
+.field::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+.avatar{
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.enter{
+    background-color: #516EFD;
+    border: 2px solid #516EFD;
+    color: white;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 94%;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.enter:hover{
+    background-color: transparent;
+    color: #516EFD;
+}
+
+.enter:active{
+    opacity: 0.5;
+}
+
+.criar-conta{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.criar-conta > a{
+    color: #6A6A98;
+    text-decoration: none;
+}
+
+.criar-conta > a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+    .fields_box{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .avatar{
+        margin-top: 50px;
+    }
+
+    .copy{
+        visibility: hidden;
+    }
+}
