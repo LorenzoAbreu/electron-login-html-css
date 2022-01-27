@@ -70,12 +70,7 @@ app.on('window-all-closed', () => {
     store.set('sizeX', sizeX);
     store.set('sizeY', sizeY);
 
-    if (process.platform != 'darwin'){
-        app.quit();
-    }
-    else{
-        return;
-    }
+    app.quit();
 })
 
 // EMAIL
@@ -95,8 +90,6 @@ const transporter = nodemailer.createTransport({
 const mysql = require('mysql');
 const getmac = require('getmac');
 const md5 = require('md5');
-
-
 
 const login = (username, password) => {
     window.webContents.send('loading', true)
@@ -126,7 +119,7 @@ const login = (username, password) => {
                     store.set('username', username);
                     store.set('password', password);
                     connection.end();
-                    window.loadURL(path.join(__dirname, 'pages/main/index.html'))
+                    window.loadFile(path.join(__dirname, 'pages/main/index.html'))
                     window.webContents.send('loading', false)
                 }
                 else{
